@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 function Projects() {
   const [user, setUser] = useState({})
   const [repos, setRepos] = useState([])
+  const [showMore, setShowMore] = useState(false)
 
   const getUser = async () => {
     axios
@@ -35,17 +36,26 @@ function Projects() {
     getRepos()
   }, [])
 
+  const handleClick = () => {
+    setShowMore(!showMore)
+  }
+  const numberOfItems = showMore ? repos.length : 6
 
   return (
     <div className="my-16" id="projects">
       <h1 className='text-4xl my-4'>Projects</h1>
       <div> {user.login} </div>
       <div>
-        {repos.map((item,i)=>(
-          <div key={i}>
-            {item.name}
-          </div> 
-        )) }
+        {repos.slice(0, numberOfItems).map((item, i) => {
+          return (
+            <div key={i}>
+              {item.name}
+            </div>
+          )
+        })}
+        <button onClick={() => handleClick()}>
+          {showMore ? "SHOW LESS" : "SHOW MORE"}
+        </button>
       </div>
     </div>
   )
