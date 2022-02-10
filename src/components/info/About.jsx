@@ -15,7 +15,7 @@ import tailwind from '../../assets/tailwind.svg'
 
 function About() {
   return (
-    <div className='my-2'>
+    <div className='mb-10 pb-4' id='about'>
       <h1 className='text-4xl'>About Me</h1>
       <div className=' lg:grid grid-cols-2 justify-between gap-6'>
         <div className='mt-4'>

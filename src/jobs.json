@@ -1,0 +1,46 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "company": "San Francisco de Asis",
+      "position": "Front End Developer",
+      "responsibilities": [
+        {
+          "id": 1,
+          "text": "Implemented websites and landing pages from concept through deployment."
+        },
+        {
+          "id": 2,
+          "text": "Standardized all output with a new, responsive, mobile-first approach and strategy."
+        },
+        {
+          "id": 3,
+          "text": "Assessed UX and UI designs."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "company": "San Francisco de Asis2",
+      "position": "Back End Developer",
+      "responsibilities": [
+        {
+          "id": 1,
+          "text": "Implemented websites and landing pages from concept through deployment."
+        },
+        {
+          "id": 2,
+          "text": "Standardized all output with a new, responsive, mobile-first approach and strategy."
+        },
+        {
+          "id": 3,
+          "text": "Assessed UX and UI designs."
+        },
+        {
+          "id": 4,
+          "text": "nice?"
+        }
+      ]
+    }
+  ]
+}
