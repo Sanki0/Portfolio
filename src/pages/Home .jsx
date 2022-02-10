@@ -1,5 +1,6 @@
 import About from "../components/info/About";
 import Experience from "../components/info/Experience";
+import Projects from "../components/info/Projects";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
       </section>
       <About />
       <Experience />
+      <Projects />
 
     </div>
   )
