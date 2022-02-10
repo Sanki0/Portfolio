@@ -3,15 +3,25 @@ import { FaEye, FaInfo, FaLink, FaStar, FaUtensils } from 'react-icons/fa'
 import { useEffect, useState } from "react"
 
 function Projects() {
+  const GITHUB_URL_PORTFOLIO = process.env.REACT_APP_GITHUB_URL_PORTFOLIO
+  const GITHUB_TOKEN_PORTFOLIO = process.env.REACT_APP_GITHUB_TOKEN_PORTFOLIO
+
+  const github = axios.create({
+    baseURL: GITHUB_URL_PORTFOLIO,
+    headers: {
+      Authorization: `token ${GITHUB_TOKEN_PORTFOLIO}`,
+    },
+  })
+
   const [user, setUser] = useState({})
   const [repos, setRepos] = useState([])
   const [showMore, setShowMore] = useState(false)
 
   const getUser = async () => {
-    axios
-      .get(`https://api.github.com/users/Sanki0`)
+    github
+      .get(`/users/Sanki0`)
       .then((res) => {
-        console.log(res)
+        console.log(res.data)
         setUser(res.data)
       })
       .catch((err) => {
@@ -21,8 +31,8 @@ function Projects() {
 
 
   const getRepos = async () => {
-    axios
-      .get(`https://api.github.com/users/Sanki0/repos`)
+    github
+      .get(`${GITHUB_URL_PORTFOLIO}users/Sanki0/repos`)
       .then((res) => {
         console.log(res)
         setRepos(res.data)
@@ -44,8 +54,8 @@ function Projects() {
 
   return (
     <div className="my-16" id="projects">
-      <h1 className='text-4xl my-4'>Projects</h1>
-      <div> {user.login} </div>
+      <h1 className='text-4xl my-4'>Projects {process.env.REACT_APP_GITHUB_URL_PORTFOLIO}</h1>
+      <div> {user.login}  </div>
       <div className="lg:grid grid-cols-3 gap-4 justify-center">
         {repos.slice(0, numberOfItems).map((item, i) => {
           return (
@@ -70,6 +80,9 @@ function Projects() {
                   <div className='mr-2 badge badge-warning badge-lg'>
                     <FaUtensils className='mr-2' /> {item.forks}
                   </div>
+                  <footer>
+                    <h1>lang {GITHUB_URL_PORTFOLIO}</h1>
+                  </footer>
                 </div>
               </div>
             </div>
