@@ -13,10 +13,10 @@ function Home() {
           I'm a Software Engineer and a Computer Science student, with a main focus on developing within the MERN stack
         </div>
       </section>
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
+      <About id='about'/>
+      <Experience id='experience'/>
+      <Projects id='projects'/>
+      <Contact id='contact'/>
 
     </div>
   )
