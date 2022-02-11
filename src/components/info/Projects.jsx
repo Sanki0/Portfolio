@@ -21,7 +21,6 @@ function Projects() {
     github
       .get(`/users/Sanki0`)
       .then((res) => {
-        console.log(res.data)
         setUser(res.data)
       })
       .catch((err) => {
@@ -32,7 +31,6 @@ function Projects() {
     github
       .get(`${GITHUB_URL_PORTFOLIO}users/Sanki0/repos`)
       .then((res) => {
-        console.log(res)
         setRepos(res.data)
       })
       .catch((err) => {
@@ -79,14 +77,14 @@ function Projects() {
         {repos.slice(0, numberOfItems).map((item, i) => {
           return (
             <div key={i} className='mb-2 rounded-md card bg-gray-800 hover:bg-gray-900'>
-              <div className='card-body'>
+              <div className='card-body text-center'>
                 <h3 className='mb-2 text-xl font-semibold'>
                   <a href={item.html_url}>
                     <FaLink className='inline mr-1' /> {item.name}
                   </a>
                 </h3>
                 <p className='mb-3'>{item.description}</p>
-                <div>
+                <div className="flex justify-evenly">
                   <div className='mr-2 badge badge-info badge-lg'>
                     <FaEye className='mr-2' /> {item.watchers_count}
                   </div>
@@ -99,10 +97,10 @@ function Projects() {
                   <div className='mr-2 badge badge-warning badge-lg'>
                     <FaUtensils className='mr-2' /> {item.forks}
                   </div>
-                  <footer>
-                    {item.language}
-                  </footer>
                 </div>
+                <footer>
+                  {item.language}
+                </footer>
               </div>
             </div>
           )

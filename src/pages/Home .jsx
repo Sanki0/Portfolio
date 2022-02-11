@@ -1,4 +1,5 @@
 import About from "../components/info/About";
+import Contact from "../components/info/Contact";
 import Experience from "../components/info/Experience";
 import Projects from "../components/info/Projects";
 
@@ -15,6 +16,7 @@ function Home() {
       <About />
       <Experience />
       <Projects />
+      <Contact />
 
     </div>
   )
