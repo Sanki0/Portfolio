@@ -28,8 +28,6 @@ function Projects() {
         console.log(err)
       })
   }
-
-
   const getRepos = async () => {
     github
       .get(`${GITHUB_URL_PORTFOLIO}users/Sanki0/repos`)
@@ -54,8 +52,29 @@ function Projects() {
 
   return (
     <div className="my-16" id="projects">
-      <h1 className='text-4xl my-4'>Projects {process.env.REACT_APP_GITHUB_URL_PORTFOLIO}</h1>
-      <div> {user.login}  </div>
+      <h1 className='text-4xl my-4'>Projects</h1>
+      <div className='card shadow-md compact side bg-base-100'>
+        <div className='flex-row items-center space-x-4 card-body'>
+          <div>
+            <div className='avatar'>
+              <div className='rounded-full shadow w-14 h-14'>
+                <img src={user.avatar_url} alt='Profile' />
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 className='card-title'>{user.login}</h2>
+            <a
+              className='text-base-content text-opacity-40'
+              href={`https://github.com/Sanki0`}
+              target='_blank'
+              rel="noreferrer"
+            >
+              Visit Profile
+            </a>
+          </div>
+        </div>
+      </div>
       <div className="lg:grid grid-cols-3 gap-4 justify-center">
         {repos.slice(0, numberOfItems).map((item, i) => {
           return (
@@ -81,7 +100,7 @@ function Projects() {
                     <FaUtensils className='mr-2' /> {item.forks}
                   </div>
                   <footer>
-                    <h1>lang {GITHUB_URL_PORTFOLIO}</h1>
+                    {item.language}
                   </footer>
                 </div>
               </div>
