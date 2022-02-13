@@ -13,8 +13,8 @@ function App() {
         <Navbar />
         <div className='container mx-auto px-3 pb-4' >
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/notfound' element={<NotFound />} />
+            <Route exact path='/' element={<Home />} />
+            <Route exact path='/notfound' element={<NotFound />} />
             <Route path='/*' element={<NotFound />} />
           </Routes>
         </div>
