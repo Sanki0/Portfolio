@@ -1,4 +1,5 @@
 import { Link } from 'react-scroll'
+import resume from '../../assets/Resume-SebastianFerreyra.pdf'
 
 function Navbar() {
 
@@ -39,7 +40,9 @@ function Navbar() {
             <li>
               <Link onClick={() => toggleCollapse('mobile-menu')} to="contact" className="block py-2 pr-4 pl-3 text-gray-100 border-gray-100 hover:bg-gray-900 md:hover:bg-transparent md:border-0 md:hover:text-gray-400 md:p-0 cursor-pointer">Contact</Link>
             </li>
-            <button className="mt-2 p-1 bg-inherit border border-white rounded lg:mt-0" style={{backgroundColor: 'rgb(0,0,0)'}}>Resume</button>
+            <a href={resume} download="Resume-SebastianFerreyra" target='_blank' rel='noreferrer' >
+              <button className="mt-2 p-1 bg-inherit border border-white rounded lg:mt-0" style={{ backgroundColor: 'rgb(0,0,0)' }}>Resume</button>
+            </a>
           </ul>
         </div>
       </nav>
