@@ -14,10 +14,10 @@ function Experience() {
   }
 
   return (
-    <div className="my-16" style={{minheight:400}} id="experience">
+    <div className="my-16" style={{minHeight:'400px'}} id="experience">
       <h1 className='text-4xl my-4'>Experience</h1>
-      <div className='lg:flex flex-row gap-6'>
-        <ul className="flex flex-row justify-evenly p-3 my-12 lg:justify-start lg:flex-col">
+      <div className='lg:grid grid-cols-3 gap-6 md:flex flex-row'>
+        <ul className="col-span-1 flex flex-row justify-evenly p-3 my-12 lg:justify-start lg:flex-col md:flex-col md:justify-start">
           {jobsJson.jobs.map((item) => (
             <li key={item.id} className="py-4" >
               <button id={item.id} onClick={selectJob} className="px-5 py-2 hover:bg-gray-600 active:bg-gray-900 focus:outline-none focus:bg-gray-900 focus:border-l-2 border-white-500/100">
@@ -27,7 +27,7 @@ function Experience() {
           ))}
         </ul>
 
-        <div className=''>
+        <div className='col-span-2'>
           <h1 className="text-2xl my-10"> {position} at {job} </h1>
           <ul className='my-6'>
             {responsibilities.map((item) => (

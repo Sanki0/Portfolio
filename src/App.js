@@ -11,7 +11,7 @@ function App() {
     <Router>
       <div className='flex flex-col justify-between min-h-screen block' id="">
         <Navbar />
-        <div className='container mx-auto px-3 py-8' >
+        <div className='container mx-auto px-3 pb-4' >
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/notfound' element={<NotFound />} />

@@ -7,38 +7,38 @@
       "responsibilities": [
         {
           "id": 1,
-          "text": "Implemented websites and landing pages from concept through deployment."
+          "text": "Implemented websites and landing pages from concept through deployment with JavaScript framework: ReactJS and CSS framework: TailwindCSS."
         },
         {
           "id": 2,
-          "text": "Standardized all output with a new, responsive, mobile-first approach and strategy."
+          "text": "Standardized all output with a new, responsive, mobile-first approach and increased number of applicants by 50%."
         },
         {
           "id": 3,
-          "text": "Assessed UX and UI designs."
+          "text": "Created the user experience that fetched, parsed, and formatted data, and relayed it into React components."
+        },
+        {
+          "id": 4,
+          "text": "Built mock designs for landing pages and contact pages with Figma."
         }
       ]
     },
     {
       "id": 2,
-      "company": "San Francisco de Asis2",
-      "position": "Back End Developer",
+      "company": "ScienceTech Research UNI",
+      "position": "Co-founder and Volunteer Tutor",
       "responsibilities": [
         {
           "id": 1,
-          "text": "Implemented websites and landing pages from concept through deployment."
+          "text": "Organized a group of friends and colleagues; and founded an NGO that helped children with low economic resources to study during the COVID-19 pandemic."
         },
         {
           "id": 2,
-          "text": "Standardized all output with a new, responsive, mobile-first approach and strategy."
+          "text": "Supervised and taught high-school students in the areas of Algebra, Physics and Math."
         },
         {
           "id": 3,
-          "text": "Assessed UX and UI designs."
-        },
-        {
-          "id": 4,
-          "text": "nice?"
+          "text": "Arranged several career fairs with various high schools and encouraged students to follow STEM majors."
         }
       ]
     }
