@@ -16,20 +16,19 @@ function Projects() {
   const [repos, setRepos] = useState([])
   const [showMore, setShowMore] = useState(false)
 
-  const getRepos = async () => {
-    github
-      .get(`${GITHUB_URL_PORTFOLIO}users/Sanki0/repos`)
-      .then((res) => {
-        setRepos(res.data)
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-  }
-
   useEffect(() => {
+    const getRepos = async () => {
+      github
+        .get(`${GITHUB_URL_PORTFOLIO}users/Sanki0/repos`)
+        .then((res) => {
+          setRepos(res.data)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
+    }
     getRepos()
-  }, [])
+  }, [setRepos, GITHUB_URL_PORTFOLIO, github])
 
   const handleClick = () => {
     setShowMore(!showMore)
