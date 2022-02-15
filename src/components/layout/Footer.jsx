@@ -3,7 +3,7 @@ import { FiTwitter, FiGithub, FiLinkedin, FiInstagram } from 'react-icons/fi'
 function Footer() {
   return (
     <footer className="flex flex-col items-center gap-4 p-4 text-neutral-content lg:flex-row justify-between px-20">
-      <div className="items-center justify-center grid-flow-col">
+      <div className="text-center items-center justify-center grid-flow-col">
         <p className='text-xs'>Design & Build by Sebastian "Sanki0" Ferreyra</p>
       </div>
       <div className="flex justify-center gap-8 md:place-self-center md:justify-self-end">

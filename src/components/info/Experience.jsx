@@ -20,7 +20,7 @@ function Experience() {
         <ul className="col-span-1 flex flex-row justify-evenly p-3 my-12 lg:justify-start lg:flex-col md:flex-col md:justify-start">
           {jobsJson.jobs.map((item) => (
             <li key={item.id} className="py-4" >
-              <button id={item.id} onClick={selectJob} className="px-5 py-2 hover:bg-gray-600 active:bg-gray-900 focus:outline-none focus:bg-gray-900 focus:border-l-2 border-white-500/100">
+              <button id={item.id} onClick={selectJob} className="px-5 py-2 bg-gray-800 hover:bg-gray-600 active:bg-gray-900 focus:outline-none focus:bg-gray-900 focus:border-l-2 border-white-500/100">
                 {item.company}
               </button>
             </li>
