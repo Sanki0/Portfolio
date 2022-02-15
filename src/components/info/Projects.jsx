@@ -3,20 +3,21 @@ import { FaEye, FaInfo, FaLink, FaStar, FaUtensils } from 'react-icons/fa'
 import { useEffect, useState } from "react"
 
 function Projects() {
-  const GITHUB_URL_PORTFOLIO = process.env.REACT_APP_GITHUB_URL_PORTFOLIO
-  const GITHUB_TOKEN_PORTFOLIO = process.env.REACT_APP_GITHUB_TOKEN_PORTFOLIO
-
-  const github = axios.create({
-    baseURL: GITHUB_URL_PORTFOLIO,
-    headers: {
-      Authorization: `token ${GITHUB_TOKEN_PORTFOLIO}`,
-    },
-  })
 
   const [repos, setRepos] = useState([])
   const [showMore, setShowMore] = useState(false)
 
   useEffect(() => {
+    const GITHUB_URL_PORTFOLIO = process.env.REACT_APP_GITHUB_URL_PORTFOLIO
+    const GITHUB_TOKEN_PORTFOLIO = process.env.REACT_APP_GITHUB_TOKEN_PORTFOLIO
+
+    const github = axios.create({
+      baseURL: GITHUB_URL_PORTFOLIO,
+      headers: {
+        Authorization: `token ${GITHUB_TOKEN_PORTFOLIO}`,
+      },
+    })
+
     const getRepos = async () => {
       github
         .get(`${GITHUB_URL_PORTFOLIO}users/Sanki0/repos`)
@@ -28,7 +29,7 @@ function Projects() {
         })
     }
     getRepos()
-  }, [setRepos, GITHUB_URL_PORTFOLIO, github])
+  }, [])
 
   const handleClick = () => {
     setShowMore(!showMore)
@@ -37,15 +38,27 @@ function Projects() {
 
   return (
     <div className="my-16" id="projects">
-      <div className="pr">
+      <div className="projects">
         <h1 className='text-4xl my-4'>Projects</h1>
-        <div>
-          <div>github finder</div>
-          <div>house marketplace</div>
-          <div>web 3</div>
+        <div className="text-center relative inline-block" >
+          <div className="project-content absolute  top-1/2 left-1/2" style={{ width:'75%' ,transform: 'translate(-50%, -50%)' }}>
+            <h1 className="text-2xl">GitHub Finder</h1>
+            <p>A React app to search GitHub profiles and see profile details</p>
+          </div>
+
+          <div className="project-image opacity-25" >
+            <a href="https://github-finder-sanki0.vercel.app/" target='_blank' rel="noreferrer">
+              <img
+                className="grayscale hover:grayscale-0 object-cover"
+                src="https://i.ibb.co/pnxt18F/screenshot-github-finder.png"
+                alt="screenshot-github-finder"
+                style={{ minHeight: '200px' }} />
+            </a>
+          </div>
+
         </div>
       </div>
-      <div>
+      <div className="repositories">
         <h1 className='text-4xl my-4'>Repositories</h1>
         <div className="lg:grid grid-cols-3 gap-4 justify-center">
           {repos.slice(0, numberOfItems).map((item, i) => {

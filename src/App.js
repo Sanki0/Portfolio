@@ -9,7 +9,7 @@ import NotFound from './pages/NotFound';
 function App() {
   return (
     <Router>
-      <div className='flex flex-col justify-between min-h-screen block' id="">
+      <div className='flex flex-col justify-between min-h-screen' id="">
         <Navbar />
         <div className='container mx-auto px-3 pb-4' >
           <Routes>

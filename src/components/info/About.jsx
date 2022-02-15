@@ -19,7 +19,7 @@ function About() {
       <h1 className='text-4xl'>About Me</h1>
       <div className=' lg:grid grid-cols-2 justify-between gap-6'>
         <div className='mt-4'>
-          <p className='mb-6'>Hey, my name is Sebastian "Sanki0" Ferreyra. A Computer Science student and a Software Engineer from Lima, Peru.</p>
+          <p className='mb-6'>Hey, my name is Sebastian "Sanki0" Ferreyra. A Computer Science student and Software Engineer from Lima, Peru.</p>
           <p className='mb-6'>As an aspiring Software Engineer, I have co-founded a NGO that helped children with low economic resources to study during the COVID-19 pandemic; and have several projects that show my capabilities as a developer.</p>
         </div>
         <div className='mt-4'>
